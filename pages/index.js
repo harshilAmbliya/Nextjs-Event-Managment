@@ -1,9 +1,13 @@
 import React from 'react'
-
-const index = () => {
+import { featuredEventList } from '../dummy_data'
+import EventList from './components/events/EventList';
+const allEventsPage = () => {
+  const featuredevents = featuredEventList();
   return (
-    <div>index</div>
+    <div>
+      <EventList items={featuredevents} />
+    </div>
   )
 }
 
-export default index
+export default allEventsPage
