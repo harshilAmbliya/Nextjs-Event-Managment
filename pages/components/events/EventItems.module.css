@@ -1,0 +1,33 @@
+.eventItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.eventItemImage {
+    width: 100%;
+    height: auto;
+}
+
+.eventItemContent {
+    text-align: center;
+}
+
+.eventItemTitle {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.eventItemDate {
+    margin-bottom: 10px;
+}
+
+.eventItemAddress {
+    margin-bottom: 10px;
+}
+
+.eventItemLink {
+    text-decoration: none;
+    color: #0070f3;
+}

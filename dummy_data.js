@@ -2,7 +2,7 @@
 const Events_data = [
     {
         "slug": "summer-music-festival",
-        "image": "https://example.com/summer-music-festival.jpg",
+        "image":"https://plus.unsplash.com/premium_photo-1661284892176-fd7713b764a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bXVzaWMlMjBmZXN0aXZhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
         "id": 1,
         "name": "Summer Music Festival",
         "type": "Concert",
@@ -15,7 +15,7 @@ const Events_data = [
     },
     {
         "slug": "tech-conference-2023",
-        "image": "https://example.com/tech-conference-2023.jpg",
+        "image":"https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGVjaCUyMGNvbmZvcmVuY2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" ,
         "id": 2,
         "name": "Tech Conference 2023",
         "type": "Conference",
@@ -28,7 +28,7 @@ const Events_data = [
     },
     {
         "slug": "fitness-expo",
-        "image": "https://example.com/fitness-expo.jpg",
+        "image":"https://images.unsplash.com/photo-1434682881908-b43d0467b798?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zml0bmVzcyUyMGVwb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" ,
         "id": 3,
         "name": "Fitness Expo",
         "type": "Exhibition",
@@ -41,7 +41,7 @@ const Events_data = [
     },
     {
         "slug": "art-workshop",
-        "image": "https://example.com/art-workshop.jpg",
+        "image":"https://images.unsplash.com/photo-1459908676235-d5f02a50184b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXJ0JTIwd29ya3Nob3B8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" ,
         "id": 4,
         "name": "Art Workshop",
         "type": "Workshop",
@@ -52,62 +52,16 @@ const Events_data = [
         "field2": "Value2",
         "field3": "Value3"
     },
-    {
-        "slug": "food-tasting-event",
-        "image": "https://example.com/food-tasting-event.jpg",
-        "id": 5,
-        "name": "Food Tasting Event",
-        "type": "Food",
-        "date": "2023-09-05",
-        "location": "Restaurant Street",
-        "organizer": "Foodies United",
-        "field1": "Value1",
-        "field2": "Value2",
-        "field3": "Value3"
-    },
-    {
-        "slug": "charity-gala",
-        "image": "https://example.com/charity-gala.jpg",
-        "id": 6,
-        "name": "Charity Gala",
-        "type": "Charity",
-        "date": "2023-11-15",
-        "location": "Luxury Hotel",
-        "organizer": "Hope Foundation",
-        "field1": "Value1",
-        "field2": "Value2",
-        "field3": "Value3"
-    },
-    {
-        "slug": "movie-night",
-        "image": "https://example.com/movie-night.jpg",
-        "id": 7,
-        "name": "Movie Night",
-        "type": "Entertainment",
-        "date": "2023-08-05",
-        "location": "Outdoor Theater",
-        "organizer": "Film Lovers Club",
-        "field1": "Value1",
-        "field2": "Value2",
-        "field3": "Value3"
-    },
-    {
-        "slug": "fashion-show",
-        "image": "https://example.com/fashion-show.jpg",
-        "id": 8,
-        "name": "Fashion Show",
-        "type": "Fashion",
-        "date": "2023-09-28",
-        "location": "Fashion Mall",
-        "organizer": "Fashionista Productions",
-        "field1": "Value1",
-        "field2": "Value2",
-        "field3": "Value3"
-    }
 ]
 
 
 
 export const featuredEventList = () => {
     return Events_data;
+}
+
+export const getEventById = (eventId) => {
+     const data = Events_data.find(e=>e.id == eventId);
+     console.log(data)
+     return data;
 }

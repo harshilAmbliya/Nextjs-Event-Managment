@@ -1,0 +1,35 @@
+.eventDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.eventImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.eventName {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.eventDate {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.eventAddress {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.eventDescription {
+    font-size: 1.2em;
+}

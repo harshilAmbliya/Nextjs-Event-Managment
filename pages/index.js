@@ -1,13 +1,19 @@
 import React from 'react'
-import { featuredEventList } from '../dummy_data'
-import EventList from './components/events/EventList';
-const allEventsPage = () => {
-  const featuredevents = featuredEventList();
-  return (
-    <div>
-      <EventList items={featuredevents} />
-    </div>
-  )
+import EventItems from './components/events/EventItems';
+import styles from './Home.module.css';
+import { featuredEventList } from '@/dummy_data';
+
+const EventHomePage = () => {
+    const EventData = featuredEventList();
+
+    return (
+        <div className={styles.homePage}>
+            <h1 className={styles.title}>Upcoming Events</h1>
+            {EventData.map((event) => {
+                return <EventItems key={event.id} {...event} />
+            })}
+        </div>
+    )
 }
 
-export default allEventsPage
+export default EventHomePage
