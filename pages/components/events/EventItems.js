@@ -1,30 +1,33 @@
 import Link from 'next/link'
 import React from 'react'
+import styles from './EventItems.module.css'
+import Button from '../ui/Button';
 
 const EventItems = (props) => {
 
     const { id, name, address, date, image } = props;
 
-    const humanredabledate = new Date(date).toLocaleDateString('en-US', {
+    const humanReadableDate = new Date(date).toLocaleDateString('en-US', {
         day: 'numeric',
         month: 'long',
         year: 'numeric'
     })
+
     return (
-        <li>
-            <img src={image} alt={name} />
-            <div className="">
-                <div className="">
-                    <h2>{name}</h2>
-                    <div>
-                        <time>{humanredabledate}</time>
+        <li className={styles.eventItem}>
+            <img className={styles.eventItemImage} src={image} alt={name} />
+            <div className={styles.eventItemContent}>
+                <div>
+                    <h2 className={styles.eventItemTitle}>{name}</h2>
+                    <div className={styles.eventItemDate}>
+                        <time>{humanReadableDate}</time>
                     </div>
-                    <div>
+                    <div className={styles.eventItemAddress}>
                         <address>{address}</address>
                     </div>
                 </div>
-                <div className="">
-                    <Link href={`/events/${id}`}>Expolre the Events</Link>
+                <div className={styles.eventItemLink}>
+                    <Button id={id}>Explore the Event</Button>
                 </div>
             </div>
         </li>
