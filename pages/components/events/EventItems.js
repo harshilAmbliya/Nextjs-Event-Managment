@@ -1,4 +1,4 @@
-import Link from 'next/link'
+// import Link from 'next/link'
 import React from 'react'
 import styles from './EventItems.module.css'
 import Button from '../ui/Button';

@@ -1,5 +1,5 @@
 import React from 'react'
-import EventItems from './EventItems';
+// import EventItems from './EventItems';
 import styles from './EventList.module.css';
 import Card from '../ui/Card';
 

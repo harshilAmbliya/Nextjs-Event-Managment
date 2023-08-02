@@ -1,0 +1,56 @@
+{
+    "products":[
+        {
+            "slug": "summer-music-festival",
+            "image":"https://plus.unsplash.com/premium_photo-1661284892176-fd7713b764a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bXVzaWMlMjBmZXN0aXZhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+            "id": 1,
+            "name": "Summer Music Festival",
+            "type": "Concert",
+            "date": "2023-08-15",
+            "location": "City Park",
+            "organizer": "Music Productions Inc.",
+            "field1": "Value1",
+            "field2": "Value2",
+            "field3": "Value3"
+        },
+        {
+            "slug": "tech-conference-2023",
+            "image":"https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGVjaCUyMGNvbmZvcmVuY2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" ,
+            "id": 2,
+            "name": "Tech Conference 2023",
+            "type": "Conference",
+            "date": "2023-09-20",
+            "location": "Convention Center",
+            "organizer": "TechCon Solutions",
+            "field1": "Value1",
+            "field2": "Value2",
+            "field3": "Value3"
+        },
+        {
+            "slug": "fitness-expo",
+            "image":"https://images.unsplash.com/photo-1434682881908-b43d0467b798?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zml0bmVzcyUyMGVwb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" ,
+            "id": 3,
+            "name": "Fitness Expo",
+            "type": "Exhibition",
+            "date": "2023-10-10",
+            "location": "Sports Arena",
+            "organizer": "HealthFirst Expo",
+            "field1": "Value1",
+            "field2": "Value2",
+            "field3": "Value3"
+        },
+        {
+            "slug": "art-workshop",
+            "image":"https://images.unsplash.com/photo-1459908676235-d5f02a50184b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXJ0JTIwd29ya3Nob3B8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" ,
+            "id": 4,
+            "name": "Art Workshop",
+            "type": "Workshop",
+            "date": "2023-08-25",
+            "location": "Community Center",
+            "organizer": "Artists Guild",
+            "field1": "Value1",
+            "field2": "Value2",
+            "field3": "Value3"
+        }
+    ]
+}
