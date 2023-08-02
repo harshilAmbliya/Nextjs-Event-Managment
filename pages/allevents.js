@@ -37,12 +37,16 @@ import { getAllData } from '@/helpers/api-handle'
 
 const AllEvents = () => {
     const [listing, setListing] = useState([]);
+    const [loading, setLoading] = useState(false);
+
     
     useEffect(() => {
         const fetchData = async () => {
             try {
+                setLoading(true);
                 const data = await getAllData();
                 setListing(data);
+                setLoading(false);
             } catch (error) {
                 console.error(error);
             }
@@ -53,8 +57,9 @@ const AllEvents = () => {
 
     return (
         <div>
+            {loading && <div>Loading...</div>}
             {
-                listing.map(product => (
+            listing &&listing.map(product => (
                     <div key={product.id}>
                         {product.name}
                     </div>
