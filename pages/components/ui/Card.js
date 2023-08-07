@@ -6,10 +6,11 @@ import Button from './Button';
 const Card = (props) => {
     console.log(props);
     const { event } = props;
-    const { id, image, name, location } = event;
+    
+    const {  id, image, name, location } = event;
     return (
 
-        <div className={styles.card}>
+        <div className={styles.card } >
             <img src={image} alt={name} className={styles.cardImage} />
             <div className="">
                 <h2 className={styles.cardTitle}>{name}</h2>

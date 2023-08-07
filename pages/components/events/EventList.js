@@ -4,9 +4,9 @@ import styles from './EventList.module.css';
 import Card from '../ui/Card';
 
 const EventList = (props) => {
-    console.log(props);
+    // console.log(props);
     const { events } = props;
-    console.log(events)
+    // console.log(events)
     const [event, setEvent] = useState([]);
 
     useEffect(() => {
@@ -23,7 +23,9 @@ const EventList = (props) => {
     return (
         <div className={styles.eventList}>
             {event.map((event) => (
-                <Card key={event.id} event={event} />
+               <div key={event.id}>
+                 <Card event={event} />
+               </div>
             ))}
         </div>
     );

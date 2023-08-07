@@ -1,8 +1,7 @@
 import React from 'react';
-import { useRouter } from 'next/router';
+
 import classes from './eventDetail.module.css'
-// import event from '../components/EventDetail';
-// import EventList from '../components/events/EventList';
+
 import { getEventById } from '@/dummy_data';
 import EventDetail from '../components/events/EventDetail';
 import { getAllData } from '@/helpers/api-handle';
@@ -16,9 +15,7 @@ import { getAllData } from '@/helpers/api-handle';
 
 
 const EventPage = () => {
-    // const router = useRouter();
-    // const id = router.query.eventId;
-    // console.log(id);
+   
 
     if (!id) {
         console.log("error: event not found")
@@ -26,12 +23,12 @@ const EventPage = () => {
     const event = getEventById(id);
 
     if (!event) {
-        return <p>Loading...</p>; // Show a loading message while fetching data
+        return <p>Loading...</p>; 
     }
 
     return (
         <div className={classes.eventPage}>
-            {/* <EventList id={id} name={name} location={location} image={image} date={date} slug={slug} /> */}
+            
             <EventDetail event={event} />
         </div>
     );
@@ -40,7 +37,7 @@ const EventPage = () => {
 
 
 export const getStaticProps = (context) => {
-
+    console.log(context)
     const { params } = context;
     const id = params;
     console.log(id)
@@ -57,7 +54,7 @@ export const getStaticPaths = async () => {
     const allData = await getAllData();
 
     const ids = allData.map(data => data.id);
-    console.log(ids)
+    // console.log(ids)
     const pathsWithParams = ids.map(id => ({ params: { id } }));
 
     return {
