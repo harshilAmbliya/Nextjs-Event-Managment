@@ -5,11 +5,12 @@
     transition: 0.3s;
     padding: 16px;
     width: 80%;
+    margin: 8px auto;
     background-color: #f1f1f1;
     display: flex; /* Use flexbox to arrange the image and content side by side */
     align-items: center; /* Center items vertically */
     border-radius: 5px;
-    margin: 8px;
+    
   }
   
   .card:hover {

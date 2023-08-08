@@ -43,13 +43,13 @@
     margin: 10px;
     width: 300px;
     text-align: center;
-    box-shadow: 0 6pxpx 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     transition: transform 0.2s ease-in-out;
   }
   
   .event-card:hover {
-    transform: scale(1.25);
+    transform: scale(1.05);
   }
   
   .event-card h2 {
