@@ -10,7 +10,7 @@ const Card = (props) => {
     const {  id, image, name, location } = event;
     return (
 
-        <div className={styles.card } >
+        <div className={styles.card } key={event.id} >
             <img src={image} alt={name} className={styles.cardImage} />
             <div className="">
                 <h2 className={styles.cardTitle}>{name}</h2>

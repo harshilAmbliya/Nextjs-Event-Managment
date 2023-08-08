@@ -23,9 +23,9 @@ const EventList = (props) => {
     return (
         <div className={styles.eventList}>
             {event.map((event) => (
-               <div key={event.id}>
+              
                  <Card event={event} />
-               </div>
+
             ))}
         </div>
     );

@@ -1,10 +1,7 @@
 import React from 'react';
-
 import classes from './eventDetail.module.css'
-
-import { getEventById } from '@/dummy_data';
 import EventDetail from '../components/events/EventDetail';
-import { getAllData } from '@/helpers/api-handle';
+import { getAllData, getEventById } from '@/helpers/api-handle';
 
 
 // export const getServerSideProps = async () => {
@@ -14,21 +11,20 @@ import { getAllData } from '@/helpers/api-handle';
 // }
 
 
-const EventPage = () => {
-   
+const EventPage = (props) => {
+    const { event } = props;
+    const { id } = event;
 
     if (!id) {
         console.log("error: event not found")
     }
-    const event = getEventById(id);
-
+   
     if (!event) {
-        return <p>Loading...</p>; 
+        return <p>Loading...</p>;
     }
 
     return (
         <div className={classes.eventPage}>
-            
             <EventDetail event={event} />
         </div>
     );
@@ -36,14 +32,14 @@ const EventPage = () => {
 
 
 
-export const getStaticProps = (context) => {
-    console.log(context)
+export const getStaticProps = async (context) => {
     const { params } = context;
-    const id = params;
-    console.log(id)
+    const id = params.eventId;
+
+    const event = await getEventById(id);
     return {
         props: {
-            data,
+            event,
         },
         revalidate: 3600
     }
@@ -52,10 +48,7 @@ export const getStaticProps = (context) => {
 export const getStaticPaths = async () => {
 
     const allData = await getAllData();
-
-    const ids = allData.map(data => data.id);
-    // console.log(ids)
-    const pathsWithParams = ids.map(id => ({ params: { id } }));
+    const pathsWithParams = allData.map(data => ({ params: { eventId: data.id.toString() } }));
 
     return {
         paths: pathsWithParams,
