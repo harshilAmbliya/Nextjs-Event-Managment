@@ -5,9 +5,9 @@ import Button from './Button';
 import { Box, Rating, Typography } from '@mui/material';
 
 const Card = (props) => {
-    console.log(props);
-    const { event } = props;
 
+    const { event } = props;
+    console.log(event)
     const { id, image, name, location } = event;
     const [value, setValue] = useState(2);
     return (

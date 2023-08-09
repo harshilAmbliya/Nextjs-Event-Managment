@@ -3,14 +3,6 @@ import classes from './eventDetail.module.css'
 import EventDetail from '../components/events/EventDetail';
 import { getAllData, getEventById } from '@/helpers/api-handle';
 
-
-// export const getServerSideProps = async () => {
-//     const router = useRouter();
-//     const data = await eventDetail(router.query.eventId);
-//     return { props: { data } }
-// }
-
-
 const EventPage = (props) => {
     const { event } = props;
     const { id } = event;
@@ -53,7 +45,6 @@ export const getStaticPaths = async () => {
     return {
         paths: pathsWithParams,
         fallback: false
-
     }
 }
 
